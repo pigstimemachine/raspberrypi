@@ -1,0 +1,103 @@
+---- i Matches (125 in 15 files) ----
+Date_20210107 in DailyRecord.h (Q:\XG20200921\H-Txt-file) :         A B C D E F G H I J K
+DailyRecord.h (Q:\XG20200921\H-Txt-file) line 1663 :                PROCESSI_in_YDXB-error:I
+DailyRecord.h (Q:\XG20200921\H-Txt-file) line 1664 :                PROCESS_CODE: I
+DailyRecord.h (Q:\XG20200921\H-Txt-file) line 1665 : #03@@@testing  EnsembleCode as4_comm_result-> PROCESS_Code:I
+DailyRecord.h (Q:\XG20200921\H-Txt-file) line 2597 : //            for(i=0;i<len;i++)
+DailyRecord.h (Q:\XG20200921\H-Txt-file) line 2599 : //               UART_Printf_Nobuff("%x ",Frame->FrameData[i]);
+DEV_Delay_ms in DEV_Config.c (LCD\Config) :     UDOUBLE i;
+DEV_Delay_ms in DEV_Config.c (LCD\Config) :     for(i=0; i < xms; i++){
+dht_driver.c (DHT11) line 42 :     //according to datasheet I have to keep the pin to low at least for 10ms, to be sure I'll keep it low for 30
+dht_driver.c (DHT11) line 44 :     //now I have to pull the pin up for at leaset 20~40us
+dht_driver.c (DHT11) line 71 :     for(int i = 0; i < DATA_LENGTH * 2; ++i)
+dht_driver.c (DHT11) line 79 :         //once the value is HIGH i need to check for how long it stays in such state
+dht_driver.c (DHT11) line 82 :         clock_gettime(CLOCK_MONOTONIC, &bits_len[i]);
+dht_driver.c (DHT11) line 84 :         clock_gettime(CLOCK_MONOTONIC, &bits_len[++i]);
+dht_driver.c (DHT11) line 94 :     //I'm calculating this now because previous operations where time critical
+dht_driver.c (DHT11) line 97 :     for(int i = 0; i < DATA_LENGTH * 2; ++i)
+dht_driver.c (DHT11) line 99 :         struct timespec t1 = bits_len[i];
+dht_driver.c (DHT11) line 100 :         struct timespec t2 = bits_len[++i];
+dht_driver.c (DHT11) line 104 :         if(dT > 50) // since around 25us is 0 and around 70us is 1 I use 50us as threshold to distinguish between 0 and 1
+dht_driver.c (DHT11) line 106 :         dataBytes[(i /2) / 8] |= currentBit << (7 - ((i / 2) % 8));
+font12.c (LCD\Fonts) line 621 : 	// @492 'I' (7 pixels wide)
+font12.c (LCD\Fonts) line 1069 : 	// @876 'i' (7 pixels wide)
+font16.c (LCD\Fonts) line 785 : 	// @1312 'I' (11 pixels wide)
+font16.c (LCD\Fonts) line 1361 : 	// @2336 'i' (11 pixels wide)
+font20.c (LCD\Fonts) line 946 : 	// @1640 'I' (14 pixels wide)
+font20.c (LCD\Fonts) line 1650 : 	// @2920 'i' (14 pixels wide)
+font24.c (LCD\Fonts) line 1109 : 	// @2952 'I' (17 pixels wide)
+font24.c (LCD\Fonts) line 1941 : 	// @5256 'i' (17 pixels wide)
+font8.c (LCD\Fonts) line 457 : 	// @328 'I' (5 pixels wide)
+font8.c (LCD\Fonts) line 777 : 	// @584 'i' (5 pixels wide)
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :     int i, j,Num;
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                         for (i = 0; i < font->Width; i++) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                 if (*ptr & (0x80 >> (i % 8))) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Foreground);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                 if (*ptr & (0x80 >> (i % 8))) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Foreground);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Background);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Background, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                             if (i % 8 == 7) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                         for (i = 0; i < font->Width; i++) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                 if (*ptr & (0x80 >> (i % 8))) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Foreground);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                 if (*ptr & (0x80 >> (i % 8))) {
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Foreground);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     Paint_SetPixel(x + i, y + j, Color_Background);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                                     // Paint_DrawPoint(x + i, y + j, Color_Background, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+Paint_DrawString_CN in GUI_Paint.c (LCD\GUI) :                             if (i % 8 == 7) {
+LCD_test in LCDtest.c (LCD) :     UDOUBLE i=0;
+LCD_test in LCDtest.c (LCD) :         i++;
+LCD_test in LCDtest.c (LCD) :         Paint_DrawNum(265, 10,i, &Font16, RED, WHITE);
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 448 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 532 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 588 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 731 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 813 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 870 :   691 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 991 :   716 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 992 :   718 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1154 :   716 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1155 :   718 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1210 :   716 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1211 :   718 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1280 :   716 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1281 :   718 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1344 :   593 root       0:00 udhcpc -i usb1
+LinuxStudy.h (Q:\XG20200921\H-Txt-file) line 1358 :   698 root       0:00 udhcpc -i usb1
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 85 : 		int a[6] = {1, 2, 3, 4, 5, 6}, i;
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 86 : 		for (i = 0; i < 6; i++) {
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 87 : 			printf(",%d" + !i, a[i]);//！i  重点是 ",%d"+!i 这个表达式。",%d" 是一个字符串，它可以转换为指向其首元素的指针，然后就可以做加减法。
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 88 : !i 这个式子只有当 i 为零的时候得 1，其余时候得 0。
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 90 : 当 i 为零的时候，printf 的第一个参数就变成 ",%d"+1。这里首先执行从字符串到指针的转换，然后再做指针的+1运算，相当于指针向后移了一位，即指向 "%d"（这里需要一点基础才能看懂）。
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 185 : 	i 数据类型（Interger）
+NeverStopStudying.h (Q:\XG20200921\H-Txt-file) line 245 : *号表示读取后忽略指定的数据不记录后面的变量（An optional starting asterisk indicates that the data is to be read from the stream but ignored, i.e. it is not stored in the corresponding argument.）
+wiringPi.c (WiringPi) line 128 : //	that I can find )-:
+wiringPi.c (WiringPi) line 599 : //	for clocks 0 and 1 respectively, however I'll include the full
+wiringPi.c (WiringPi) line 689 : 	"  functions, so I'm aborting your program before it crashes anyway.\n", fName) ;
+wiringPi.c (WiringPi) line 725 :  *	The main difference between the revision 1 and 2 system that I use here
+wiringPi.c (WiringPi) line 760 : //	on a Pi. I'm getting fed-up with people whinging at me because
+wiringPi.c (WiringPi) line 776 : //	However I still want to check because it will trap the cheapskates and rip-
+wiringPi.c (WiringPi) line 778 : //	I do not support so don't email me your bleating whinges about anything
+wiringPi.c (WiringPi) line 784 :     fprintf (stderr, "Unable to determine hardware version. I see: %s,\n", line) ;
+wiringPi.c (WiringPi) line 796 : //	version that will not run with a new 4.9 kernel. I utterly hate and
+wiringPi.c (WiringPi) line 799 : //	I also get bleats from people running other than Raspbian with another
+wiringPi.c (WiringPi) line 801 : //	this might actually help them. It might not - I only have the capacity
+wiringPi.c (WiringPi) line 804 : //	However, I've decided to leave this check out and rely purely on the
+wiringPi.c (WiringPi) line 810 : //	In-future, I ought to use the device tree as there are now Pi entries in
+wiringPi.c (WiringPi) line 812 : //	but I'll leave that for the next revision. Or the next.
+wiringPi.c (WiringPi) line 896 :  *	So the distinction between boards that I can see is:
+wiringPi.c (WiringPi) line 1149 :  *	for the gpio readall command (I think)
+wiringPi.c (WiringPi) line 1999 :   int   count, i ;
+wiringPi.c (WiringPi) line 2067 :   for (i = 0 ; i < count ; ++i)
+wiringPi.c (WiringPi) line 2132 :  *	So what I'll do now is if the delay is less than 100uS we'll do it
+wiringPi.c (WiringPi) line 2259 : //	(you run out of file handles!) but I'm fed-up with the useless twats who email
+wiringPi.h (WiringPi) line 27 : // C doesn't have true/false by default and I can never remember which
+wiringPi.h (WiringPi) line 29 : //	(and yes, I know about stdbool.h but I like capitals for these and I'm old)
+ZCJlib.c (ZCJlib) line 405 :     int i;
+ZCJlib.c (ZCJlib) line 407 :     while(i < 100)
+ZCJlib.c (ZCJlib) line 409 :         i+=1;

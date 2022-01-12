@@ -1,0 +1,20 @@
+CC = gcc
+TARGET = DHT11_FUXK.bin
+CFLAGS =  -lrt -ldl -pthread -O2 -g -lm
+
+mainsource = 		./*.c
+gpio= 				./MyGPIO/*.c
+
+debug = -g
+
+$(TARGET):
+	$(CC)  -o $@ $(mainsource) $(gpio) -lm  $(CFLAGS)
+#	cp $(TARGET) $(fileinstall) -rf
+#	cp $(TARGET) $(fileinstall) -rf
+#	cp $(TARGET) $(file_bak) -rf
+#	chmod 777 $(fileinstall)$(TARGET)
+#	rm $(TARGET) -rf
+
+clean:
+	rm $(TARGET) -rf;
+	

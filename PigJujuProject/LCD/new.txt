@@ -1,0 +1,60 @@
+p\210/dev/sda1	/media/ocdata	ext4	defaults	0	1
+sudo vi /etc/fstab 
+sudo chown -R www-data:www-data /media/ocdata/sda_data
+sudo mkdir /media/ocdata/sda_data
+sudo mount /dev/sda1 /media/ocdata/
+sudo mkdir -p /media/ocdata
+sudo mkfs.ext4 /dev/sda1w回车pno
+sudo fdisk /dev/sda
+sudo blkid#查看外部硬盘#挂载硬盘a2enmod rewrite
+sudo ls -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
+#忘了什么问题增加的配置source /etc/apache2/envvars
+#apache更改环境变量后腰刷新配置文件
+sudo service apache2 restart
+#重启apache2
+chown -R 进行递归，联通子目录下的所有文件，目录chown 所有者，所属组 文件/目录名
+#同时更改
+charp root name/name.pychgrp 组名 文件/目录
+#更改文件的用户组 
+chown root name/name.pychown 账号名称 文件/目录
+#更改文件拥有者
+whoami
+#查看当前登录用户
+sudo umount -l /media/pi/......
+#卸载
+upansudo update-rc.d -f name.sh remove
+#卸载启动脚本的方法
+sudo update-rc.d name.sh defaults 95
+#添加启动脚本 最后的数字代表优先级 可以写成95 80 第一个是启动优先级 第二个是关机优先级
+ps -aux|grep /home/pi/Program/shell/update.sh
+#查看程序是否运行
+/opt/start.sh
+#1，在/etc/rc.local文件中添加自启动命令，注意启动文件在exit 0之前
+#如何添加自启动文件cat /proc/cpuinfo
+查看主板版本
+cat /proc/version
+#查看操作系统版本      
+  TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0    
+  TX packets 195  bytes 39192 (38.2 KiB)     
+  RX errors 0  dropped 0  overruns 0  frame 0    
+  RX packets 553  bytes 135492 (132.3 KiB)     
+  ether dc:a6:32:61:20:87  txqueuelen 1000  (Ethernet) 
+  inet6 fe80::dda6:5d5:2027:9e39  prefixlen 64  scopeid 0x20<link> 
+  inet 188.188.2.99  netmask 255.255.0.0  broadcast 188.188.255.255eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+  #MAC地址
+  watch -n 0.1 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq 
+  #查看cpu频率
+  /opt/vc/bin/vcgencmd measure_temp
+  watch -n 0.1 cat /sys/class/thermal/thermal_zone0/temp 
+  #实时查看cpu温度
+  cat /sys/class/thermal/thermal_zone0/temp 
+  #查看cpu温度
+  #20201123
+  #ZCJ NOTES
+
+
+
+console=serial10,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline KERN_WARNING
+
+console=tty1 console=serial0,115200 root=PARTUUID=5e3da3da-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles  loglevel=1
+NOT syncing vfs unable to mount root fs on unknown block

@@ -1,0 +1,52 @@
+
+LCDConfig   = ./LCD/Config/*.c
+LCDDriver      = ./LCD/LCD/*.c
+LCDFonts    = ./LCD/Fonts/*.c
+LCDGUI      = ./LCD/GUI/*.c
+LCD = ./LCD/*.c
+DIR_BIN      = ./bin
+mainsource = 		./*.c
+DHT11= 				./DHT11/*.c
+LED =               ./LED/*.c
+LIB=          ./ZCJlib/*.c
+OBJ_C = $(wildcard  $(DHT11) $(LED) $(LIB) $(LCDConfig) $(LCDFonts) $(LCDGUI)   $(LCDDriver)  $(LCD)   $(mainsource))
+OBJ_O = $(patsubst %.c,${DIR_BIN}/%.o,$(notdir ${OBJ_C}))
+
+TARGET = pigstimemachine2020.bin
+
+#USELIB = USE_BCM2835_LIB
+#USELIB = USE_WIRINGPI_LIB
+# USELIB = USE_DEV_LIB
+DEBUG = -D $(USELIB)
+#ifeq ($(USELIB), USE_BCM2835_LIB)
+ #   LIB = -lbcm2835 -lm 
+#else ifeq ($(USELIB), USE_WIRINGPI_LIB)
+ #   LIB = -lwiringPi -lm 
+#endif
+
+
+CC = arm-linux-gnueabihf-gcc
+MSG =  -lrt -ldl -pthread  -lpthread -mfpu=neon -Wl,--hash-style=sysv -O2 -lm  -Wall  -lwiringPi  -lbcm2835 
+CFLAGS += $(MSG) $(DEBUG)
+
+${TARGET}:${OBJ_O}
+	$(CC) $(CFLAGS) $(OBJ_O) -o $@ 
+    
+${DIR_BIN}/%.o:$(LCD)/%.c
+	$(CC) $(CFLAGS) -c  $< -o $@ -I $(LCDConfig) -I $(LCDGUI) -I $(LCDDriver)
+    
+${DIR_BIN}/%.o:$(LCDDriver)/%.c
+	$(CC) $(CFLAGS) -c  $< -o $@ -I $(LCDConfig)
+    
+${DIR_BIN}/%.o:$(LCDFonts)/%.c
+	$(CC) $(CFLAGS) -c  $< -o $@
+    
+${DIR_BIN}/%.o:$(LCDGUI)/%.c
+	$(CC) $(CFLAGS) -c  $< -o $@ -I $(LCDConfig)  -I $(LCDDriver) -I $(LCD)
+
+${DIR_BIN}/%.o:$(LCDConfig)/%.c
+	$(CC) $(CFLAGS) -c  $< -o $@ 
+	
+clean :
+	rm $(DIR_BIN)/*.* 
+	rm $(TARGET) 

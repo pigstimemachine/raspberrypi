@@ -1,0 +1,35 @@
+Compiler =  arm-linux-gnueabihf-gcc
+TARGET = pigstimemachine2020.bin
+CFLAGS =  -lrt -ldl -pthread  -lpthread -mfpu=neon -Wl,--hash-style=sysv -O2 -lm  -Wall  -lwiringPi  -lbcm2835 
+
+#fileinstall 		= 	/opt/pipe/a610/m_nfs/app/
+
+mainsource = 		./*.c
+DHT11_GPIO= 		./DHT11/MyGPIO/*.c
+DHT11= 				./DHT11/*.c
+LED =               ./LED/*.c
+LIB=          ./ZCJlib/*.c
+#GPIO= 				./GPIO/*.c
+LCDConfig =               ./LCD/Config/*.c
+LCDFonts =               ./LCD/Fonts/*.c
+LCDGUI =               ./LCD/GUI/*.c
+LCDDriver =               ./LCD/LCD/*.c
+LCD =               ./LCD/*.c
+debug = -g
+
+$(TARGET):
+	$(Compiler)  -o $@  $(DHT11_GPIO)  $(DHT11) $(LED) $(LIB) $(LCDConfig) $(LCDFonts) $(LCDGUI)   $(LCDDriver)  $(LCD)   $(mainsource) $(CFLAGS) $(debug)
+#	cp $(TARGET) $(fileinstall) -rf
+#	chmod 777 $(fileinstall)$(TARGET)
+#	rm $(TARGET) -rf
+
+	
+#install:
+#	cp $(TARGET) $(fileinstall) -rf
+#	chmod 777 $(fileinstall)$(TARGET)
+#	rm $(TARGET) -rf
+install:
+	rm $(TARGET) -rf;
+	make $(TARGET) ;
+clean:
+	rm $(TARGET) -rf;
